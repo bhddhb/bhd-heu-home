@@ -1,18 +1,18 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#define maxsize 20                  //¶¨ÒåÊı±í²»³¬¹ı20½×
+#define maxsize 20                  //å®šä¹‰æ•°è¡¨ä¸è¶…è¿‡20é˜¶
 
-void print_numble(int n)                //ÄæÊ±ÕëÊı±íº¯Êı
+void print_numble(int n)                //é€†æ—¶é’ˆæ•°è¡¨å‡½æ•°
 {
 	int arr[maxsize][maxsize];
-	int sr = 0;                  //ÆğÊ¼ĞĞ
-	int endr = n - 1;            //ÖÕÖ¹ĞĞ
-	int sc = 0;                  //ÆğÊ¼ÁĞ
-	int endc = n - 1;            //ÖÕÖ¹ÁĞ
-	int m = 1;         //´Ó1¿ªÊ¼£¬ÌîÈëÊı×é
+	int sr = 0;                  //èµ·å§‹è¡Œ
+	int endr = n - 1;            //ç»ˆæ­¢è¡Œ
+	int sc = 0;                  //èµ·å§‹åˆ—
+	int endc = n - 1;            //ç»ˆæ­¢åˆ—
+	int m = 1;         //ä»1å¼€å§‹ï¼Œå¡«å…¥æ•°ç»„
 	while (sr <= endr && sc <= endc)
 	{
-		//´ÓÏÂµ½ÉÏ
+		//ä»ä¸‹åˆ°ä¸Š
 		
 		for (int i = endr ; i >= sr; i--)
 		{
@@ -20,7 +20,7 @@ void print_numble(int n)                //ÄæÊ±ÕëÊı±íº¯Êı
 		}
 		endc--;
 		
-		//´ÓÓÒµ½×ó
+		//ä»å³åˆ°å·¦
 		for (int i = endc ; i >= sc; i--)
 		{
 
@@ -28,14 +28,14 @@ void print_numble(int n)                //ÄæÊ±ÕëÊı±íº¯Êı
 		}
 		sr++;
 		
-		//´ÓÉÏµ½ÏÂ
+		//ä»ä¸Šåˆ°ä¸‹
 		for (int i = sr  ; i <= endr; i++)
 		{
 			arr[i][sc] = m++;
 		}
 		sc++;
 		
-		//´Ó×óµ½ÓÒ
+		//ä»å·¦åˆ°å³
 		for (int i = sc  ; i <= endc; i++)
 		{
 			arr[endr][i] = m++;
@@ -46,7 +46,7 @@ void print_numble(int n)                //ÄæÊ±ÕëÊı±íº¯Êı
 	{
 		for (int s = 0; s < n ; s++)
 		{ 
-			printf("%4d", arr[i][s]);              //´òÓ¡Êı×é
+			printf("%4d", arr[i][s]);              //æ‰“å°æ•°ç»„
 		}
 		printf("\n");
 	}
@@ -57,9 +57,9 @@ void print_numble(int n)                //ÄæÊ±ÕëÊı±íº¯Êı
 int main()
 {
 	int n = 0;
-	printf("ÇëÊäÈë½×Êı£º");
+	printf("è¯·è¾“å…¥é˜¶æ•°ï¼š");
 	scanf("%d", &n);
-	printf("%d½×ÄæÊ±ÕëÊı±íÎª£º\n", n);
+	printf("%dé˜¶é€†æ—¶é’ˆæ•°è¡¨ä¸ºï¼š\n", n);
 	print_numble(n);
 	return 0;
 }
