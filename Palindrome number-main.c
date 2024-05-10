@@ -5,21 +5,21 @@ void printPalindromes(int n) {
     int i, j;
     int m;
     for (i = 0; i <= n; i++) {
-        // ½«Êı×Ö×ª»»Îª×Ö·û´®
+        // å°†æ•°å­—è½¬æ¢ä¸ºå­—ç¬¦ä¸²
         char numStr[10];
         sprintf(numStr, "%d", i);
 
-        // ·´×ª×Ö·û´®
+        // åè½¬å­—ç¬¦ä¸²
         int len = strlen(numStr);
         char reversedStr[len + 1];
         for (j = len - 1; j >= 0; j--)
             reversedStr[len - j - 1] = numStr[j];
 
-        // ÅĞ¶ÏÊÇ·ñÎª»ØÎÄÊı
+        // åˆ¤æ–­æ˜¯å¦ä¸ºå›æ–‡æ•°
         if (strcmp(numStr, reversedStr) == 0) {
             printf("%d,", i);
             m++;
-            // Ã¿ĞĞÊä³ö 10 ¸ö»ØÎÄÊıºó»»ĞĞ
+            // æ¯è¡Œè¾“å‡º 10 ä¸ªå›æ–‡æ•°åæ¢è¡Œ
             if (m % 10 == 0)
             {
                 printf("\n");
